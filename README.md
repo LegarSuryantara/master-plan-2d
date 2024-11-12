@@ -23,3 +23,46 @@
 
 3. Method completedCount : Method ini adalah sebuah getter yang menghitung jumlah tugas yang telah diselesaikan dalam daftar tasks. Di sini, tasks adalah koleksi dari objek tugas (task), dan setiap tugas memiliki properti complete yang menunjukkan apakah tugas tersebut telah diselesaikan atau belum.
    Method completenessMessage: Method ini juga merupakan sebuah getter yang menyajikan pesan string yang menunjukkan jumlah tugas yang telah diselesaikan dibandingkan dengan total jumlah tugas. Dengan memanggil completedCount, method ini menggabungkan hasilnya dengan total jumlah tugas (tasks.length) untuk membentuk pesan yang informatif.
+
+
+# praktikum 3
+
+1. ![gif](assets/gif/004.gif)
+Penjelasan : membuat aplikasi manajemen waktu sehari hari
+
+2. Gambar tersebut menunjukkan diagram navigasi antar halaman (screen navigation) dalam pengembangan aplikasi menggunakan Flutter/Material Design. Mari saya jelaskan maksudnya:
+
+Sisi Kiri (Halaman Awal):
+
+Dimulai dengan MaterialApp sebagai root aplikasi
+Menggunakan PlanProvider untuk manajemen state
+Memiliki PlanCreatorScreen yang berisi:
+Column sebagai layout utama
+TextField untuk input
+Expanded dengan ListView di dalamnya
+Sisi Kanan (Halaman Tujuan):
+
+Juga dimulai dengan MaterialApp
+Menggunakan PlanScreen sebagai halaman utama
+Memiliki Scaffold sebagai struktur dasar
+Column yang berisi:
+Expanded dengan ListView
+SafeArea dengan Text di dalamnya
+Navigator Push:
+
+Tanda panah di tengah menunjukkan navigasi menggunakan Navigator.push()
+Ini menandakan perpindahan dari halaman pembuatan plan (kiri) ke halaman detail plan (kanan)
+Diagram ini menggambarkan arsitektur navigasi aplikasi dimana pengguna dapat membuat sebuah plan di halaman pertama, kemudian berpindah ke halaman kedua untuk melihat detail atau hasil dari plan tersebut. Struktur ini umum digunakan dalam pengembangan aplikasi Flutter untuk mengelola navigasi antar halaman dengan efektif.
+
+3. Langkah 1: Edit PlanProvider Perhatikan kode berikut, edit class PlanProvider sehingga dapat menangani List Plan. class PlanProvider extends InheritedNotifier<ValueNotifier<List>> { pasted AD jawaban nomor 3
+
+Berdasarkan Langkah 14 pada praktikum, saya akan menjelaskan aplikasi yang dibuat:
+
+Aplikasi ini adalah sebuah "Master Plans" atau aplikasi pengelola rencana/tugas dengan fitur sebagai berikut:
+
+Tampilan Awal (PlanCreatorScreen): Memiliki AppBar dengan judul "Master Plans legar" TextField untuk menambahkan rencana baru Area tampilan daftar rencana Fitur-fitur Utama: Dapat menambahkan rencana baru melalui TextField Jika belum ada rencana, menampilkan ikon note dan pesan "Anda belum memiliki rencana apapun" Menampilkan daftar rencana dalam bentuk ListView Setiap item rencana menampilkan: Nama rencana (title) Pesan kelengkapan rencana (subtitle) Dapat mengklik rencana untuk melihat detail dan mengelola tasks Navigasi: Ketika mengklik sebuah rencana, aplikasi akan berpindah ke PlanScreen PlanScreen menampilkan detail rencana dan memungkinkan penambahan/pengelolaan tasks State Management: Menggunakan PlanProvider untuk mengelola state Dapat memperbarui dan menyimpan daftar rencana State dipertahankan antar screen menggunakan InheritedNotifier
+
+
+
+
+
